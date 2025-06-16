@@ -1,0 +1,85 @@
+/* Responsive gradient background */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(-45deg, #aac0d4, #9dcdcd, #b0c994, #e0d4a0);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for welcome text */
+.welcome-container {
+  text-align: center;
+  color: #162336;
+  animation: fadeInContainer 2s ease-in;
+  padding: 0 20px;
+}
+
+/* Fade-in text */
+.fade-in {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  animation: fadeInText 3s ease forwards;
+  opacity: 0;
+}
+
+/* Button to next page */
+.next-button {
+  display: inline-block;
+  padding: 20px 35px;
+  font-size: 2rem;
+  background-color: #162336;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s ease;
+  font-weight: bold;
+}
+
+.next-button:hover {
+  background-color: transparent;
+  color: #162336;
+  border: 2px solid #162336;
+}
+
+/* Background Animation */
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Text Fade In */
+@keyframes fadeInText {
+  0% {opacity: 0; transform: translateY(-20px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInContainer {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/* ✅ RESPONSIVENESS for small screens */
+@media (max-width: 600px) {
+  .fade-in {
+    font-size: 1.5rem;
+  }
+
+  .next-button {
+    font-size: 1.5rem;
+    padding: 16px 30px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
