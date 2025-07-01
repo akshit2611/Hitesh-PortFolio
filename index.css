@@ -75,11 +75,11 @@ body {
     font-size: 1.5rem;
   }
 
-  .next-button {
+/*   .next-button {
     font-size: 1.5rem;
     padding: 16px 30px;
     bottom: 30px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); */
   }
 }
